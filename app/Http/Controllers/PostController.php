@@ -35,7 +35,7 @@ class PostController extends Controller
         return view('admin.create');
     }
 
-    public function getAdminEdit()
+    public function getAdminEdit(Store $session, $id)
     {
         $post = new Post();
         $post = $post->getPost($session, $id);
